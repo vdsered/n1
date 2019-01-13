@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">N1RU</string>
+    <string name="full_address">%s, %s</string>
+    <string name="price">Цена %s ₽</string>
+    <string name="unknown_address">Адрес не указан</string>
+    <string name="area_values">Кухня %s, Жилая площадь %s, Общая %s м² </string>
+    <string name="room_count">%s-комнатная</string>
+    <string name="floor_detailed_information">Этаж %s, всего этажей %s</string>
+</resources>
