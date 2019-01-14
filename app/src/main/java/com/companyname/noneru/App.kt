@@ -23,7 +23,22 @@ class App: Application() {
             }
         }
 
-        val appModules = listOf(dataSourceModule)
+        val displayCaseModules = module {
+
+            factory { NetworkDetector() }
+
+            scope("repositoryScope") {
+                RetrySupportingOfferRepository(get())
+            } bind OfferRepository::class
+
+            factory {
+                OfferDisplayCaseView()
+            }
+            viewModel {
+                OfferDisplayCaseViewModel(get())
+            }
+        }
+        val appModules = listOf(dataSourceModule, displayCaseModules)
 
         startKoin(this, appModules)
     }
